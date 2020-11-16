@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4B1B7F5361AE635C2C05B853 /* Pods_Insta_X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EFF497A350F19D7DF9CFB8 /* Pods_Insta_X.framework */; };
-		E84D5E11255C5AD900423CBE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D5E10255C5AD900423CBE /* LoginViewController.swift */; };
+		E84D5E11255C5AD900423CBE /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D5E10255C5AD900423CBE /* Login.swift */; };
 		F748713825595F3200599306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748713725595F3200599306 /* AppDelegate.swift */; };
 		F748713C25595F3200599306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748713B25595F3200599306 /* ViewController.swift */; };
 		F748714125595F3200599306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F748714025595F3200599306 /* Assets.xcassets */; };
 		F748714425595F3200599306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F748714225595F3200599306 /* LaunchScreen.storyboard */; };
-		F75F627B255C2E9200BD0727 /* GetCodeofAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F627A255C2E9200BD0727 /* GetCodeofAuth.swift */; };
 		F75F6285255C41C200BD0727 /* EnterCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F6284255C41C200BD0727 /* EnterCode.swift */; };
+		F774B3362561B39E00E0713B /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F774B3352561B39E00E0713B /* extensions.swift */; };
+		F774B33B2561B73100E0713B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F774B33A2561B73100E0713B /* SignUp.swift */; };
+		F774B33E2561BCC300E0713B /* ShowAlertExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F774B33D2561BCC300E0713B /* ShowAlertExtensions.swift */; };
 		F7CFE724255971B300FCDD21 /* AuthSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CFE723255971B300FCDD21 /* AuthSB.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		669F03411B6DB32617760D05 /* Pods-Insta-X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-X.release.xcconfig"; path = "Target Support Files/Pods-Insta-X/Pods-Insta-X.release.xcconfig"; sourceTree = "<group>"; };
 		DC5DC3B9E6144C3E1164472D /* Pods-Insta-X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-X.debug.xcconfig"; path = "Target Support Files/Pods-Insta-X/Pods-Insta-X.debug.xcconfig"; sourceTree = "<group>"; };
-		E84D5E10255C5AD900423CBE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E84D5E10255C5AD900423CBE /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E8EFF497A350F19D7DF9CFB8 /* Pods_Insta_X.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Insta_X.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F748713425595F3200599306 /* Insta-X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta-X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F748713725595F3200599306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,8 +35,10 @@
 		F748715025595F3200599306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F748715925595F3200599306 /* Insta_XUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insta_XUITests.swift; sourceTree = "<group>"; };
 		F748715B25595F3200599306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F75F627A255C2E9200BD0727 /* GetCodeofAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCodeofAuth.swift; sourceTree = "<group>"; };
 		F75F6284255C41C200BD0727 /* EnterCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCode.swift; sourceTree = "<group>"; };
+		F774B3352561B39E00E0713B /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		F774B33A2561B73100E0713B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		F774B33D2561BCC300E0713B /* ShowAlertExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertExtensions.swift; sourceTree = "<group>"; };
 		F7CFE723255971B300FCDD21 /* AuthSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthSB.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +90,9 @@
 		E84D5E0F255C5AC700423CBE /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				E84D5E10255C5AD900423CBE /* LoginViewController.swift */,
+				E84D5E10255C5AD900423CBE /* Login.swift */,
+				F774B33A2561B73100E0713B /* SignUp.swift */,
+				F75F6284255C41C200BD0727 /* EnterCode.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -114,15 +120,14 @@
 		F748713625595F3200599306 /* Insta-X */ = {
 			isa = PBXGroup;
 			children = (
+				F774B3342561B38100E0713B /* extensions */,
 				E84D5E0E255C5ABF00423CBE /* VC */,
 				E84D5E0C255C5AA400423CBE /* SP */,
 				F748713725595F3200599306 /* AppDelegate.swift */,
-				F75F6284255C41C200BD0727 /* EnterCode.swift */,
 				F748713B25595F3200599306 /* ViewController.swift */,
 				F748714025595F3200599306 /* Assets.xcassets */,
 				F748714225595F3200599306 /* LaunchScreen.storyboard */,
 				F748714525595F3200599306 /* Info.plist */,
-				F75F627A255C2E9200BD0727 /* GetCodeofAuth.swift */,
 			);
 			path = "Insta-X";
 			sourceTree = "<group>";
@@ -143,6 +148,15 @@
 				F748715B25595F3200599306 /* Info.plist */,
 			);
 			path = "Insta-XUITests";
+			sourceTree = "<group>";
+		};
+		F774B3342561B38100E0713B /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F774B3352561B39E00E0713B /* extensions.swift */,
+				F774B33D2561BCC300E0713B /* ShowAlertExtensions.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,11 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E84D5E11255C5AD900423CBE /* LoginViewController.swift in Sources */,
-				F75F627B255C2E9200BD0727 /* GetCodeofAuth.swift in Sources */,
+				F774B33B2561B73100E0713B /* SignUp.swift in Sources */,
+				E84D5E11255C5AD900423CBE /* Login.swift in Sources */,
 				F748713C25595F3200599306 /* ViewController.swift in Sources */,
 				F75F6285255C41C200BD0727 /* EnterCode.swift in Sources */,
+				F774B33E2561BCC300E0713B /* ShowAlertExtensions.swift in Sources */,
 				F748713825595F3200599306 /* AppDelegate.swift in Sources */,
+				F774B3362561B39E00E0713B /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
