@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4B1B7F5361AE635C2C05B853 /* Pods_Insta_X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EFF497A350F19D7DF9CFB8 /* Pods_Insta_X.framework */; };
+		E8417EB725605964004C08DA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8417EB625605963004C08DA /* UIView+.swift */; };
+		E8417EBB25605D23004C08DA /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8417EBA25605D23004C08DA /* UIViewController+.swift */; };
 		E84D5E11255C5AD900423CBE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D5E10255C5AD900423CBE /* LoginViewController.swift */; };
+		E8E068DF2569831900B449E2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E068DE2569831900B449E2 /* Network.swift */; };
+		E8E649AC2565992C008BCC76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E649AB2565992C008BCC76 /* Constants.swift */; };
+		E8E649B225659AAA008BCC76 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E649B125659AAA008BCC76 /* CountriesModel.swift */; };
 		F748713825595F3200599306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748713725595F3200599306 /* AppDelegate.swift */; };
-		F748713C25595F3200599306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748713B25595F3200599306 /* ViewController.swift */; };
+		F748713C25595F3200599306 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748713B25595F3200599306 /* RegisterViewController.swift */; };
 		F748714125595F3200599306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F748714025595F3200599306 /* Assets.xcassets */; };
 		F748714425595F3200599306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F748714225595F3200599306 /* LaunchScreen.storyboard */; };
 		F75F627B255C2E9200BD0727 /* GetCodeofAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F627A255C2E9200BD0727 /* GetCodeofAuth.swift */; };
@@ -21,11 +26,16 @@
 /* Begin PBXFileReference section */
 		669F03411B6DB32617760D05 /* Pods-Insta-X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-X.release.xcconfig"; path = "Target Support Files/Pods-Insta-X/Pods-Insta-X.release.xcconfig"; sourceTree = "<group>"; };
 		DC5DC3B9E6144C3E1164472D /* Pods-Insta-X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-X.debug.xcconfig"; path = "Target Support Files/Pods-Insta-X/Pods-Insta-X.debug.xcconfig"; sourceTree = "<group>"; };
+		E8417EB625605963004C08DA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		E8417EBA25605D23004C08DA /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		E84D5E10255C5AD900423CBE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E8E068DE2569831900B449E2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		E8E649AB2565992C008BCC76 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E8E649B125659AAA008BCC76 /* CountriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
 		E8EFF497A350F19D7DF9CFB8 /* Pods_Insta_X.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Insta_X.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F748713425595F3200599306 /* Insta-X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta-X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F748713725595F3200599306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F748713B25595F3200599306 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F748713B25595F3200599306 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F748714025595F3200599306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F748714325595F3200599306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F748714525595F3200599306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +77,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E8417EB525605952004C08DA /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				E8417EB625605963004C08DA /* UIView+.swift */,
+				E8417EBA25605D23004C08DA /* UIViewController+.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		E84D5E0C255C5AA400423CBE /* SP */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,9 +105,26 @@
 		E84D5E0F255C5AC700423CBE /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				F748713B25595F3200599306 /* RegisterViewController.swift */,
 				E84D5E10255C5AD900423CBE /* LoginViewController.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		E8E068DD256982F700B449E2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E8E068DE2569831900B449E2 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E8E649B025659A9B008BCC76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8E649B125659AAA008BCC76 /* CountriesModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F748712B25595F3200599306 = {
@@ -114,15 +150,18 @@
 		F748713625595F3200599306 /* Insta-X */ = {
 			isa = PBXGroup;
 			children = (
+				E8E068DD256982F700B449E2 /* Network */,
+				E8E649B025659A9B008BCC76 /* Model */,
+				E8417EB525605952004C08DA /* extension */,
 				E84D5E0E255C5ABF00423CBE /* VC */,
 				E84D5E0C255C5AA400423CBE /* SP */,
 				F748713725595F3200599306 /* AppDelegate.swift */,
 				F75F6284255C41C200BD0727 /* EnterCode.swift */,
-				F748713B25595F3200599306 /* ViewController.swift */,
 				F748714025595F3200599306 /* Assets.xcassets */,
 				F748714225595F3200599306 /* LaunchScreen.storyboard */,
 				F748714525595F3200599306 /* Info.plist */,
 				F75F627A255C2E9200BD0727 /* GetCodeofAuth.swift */,
+				E8E649AB2565992C008BCC76 /* Constants.swift */,
 			);
 			path = "Insta-X";
 			sourceTree = "<group>";
@@ -259,11 +298,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E068DF2569831900B449E2 /* Network.swift in Sources */,
+				E8417EBB25605D23004C08DA /* UIViewController+.swift in Sources */,
+				E8E649B225659AAA008BCC76 /* CountriesModel.swift in Sources */,
+				E8417EB725605964004C08DA /* UIView+.swift in Sources */,
 				E84D5E11255C5AD900423CBE /* LoginViewController.swift in Sources */,
 				F75F627B255C2E9200BD0727 /* GetCodeofAuth.swift in Sources */,
-				F748713C25595F3200599306 /* ViewController.swift in Sources */,
+				F748713C25595F3200599306 /* RegisterViewController.swift in Sources */,
 				F75F6285255C41C200BD0727 /* EnterCode.swift in Sources */,
 				F748713825595F3200599306 /* AppDelegate.swift in Sources */,
+				E8E649AC2565992C008BCC76 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,13 +448,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2DBF97GBBN;
+				DEVELOPMENT_TEAM = 6Z5X4XX28B;
 				INFOPLIST_FILE = "Insta-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.youssefDawla.App-Design.Insta-X";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.youssefDawla.App-Design.Insta-XX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,13 +468,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2DBF97GBBN;
+				DEVELOPMENT_TEAM = 6Z5X4XX28B;
 				INFOPLIST_FILE = "Insta-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.youssefDawla.App-Design.Insta-X";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.youssefDawla.App-Design.Insta-XX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
