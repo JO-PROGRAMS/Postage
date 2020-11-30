@@ -12,8 +12,10 @@ class TabBar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let homeVC = UIViewController()
-        homeVC.view.backgroundColor = .red
+        tabBar.isTranslucent = true
+        tabBar.isSpringLoaded = true
+        
+        let homeVC = HomeTableViewViewController()
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "Group -3"), selectedImage: #imageLiteral(resourceName: "Group 7"))
         
         let notsVC = UIViewController()

@@ -218,7 +218,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efG-CT-VW3">
-                                <rect key="frame" x="15" y="196" width="345" height="270"/>
+                                <rect key="frame" x="15" y="197.5" width="345" height="270"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yBf-5U-jOt">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="270"/>
@@ -228,11 +228,21 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FjL-H5-fk4">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kfX-UY-KJu">
                                                 <rect key="frame" x="0.0" y="57" width="345" height="42"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+ ..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dEv-RM-d4S">
+                                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="42"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FjL-H5-fk4">
+                                                        <rect key="frame" x="104.5" y="0.0" width="240.5" height="42"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-LN-9Ug">
                                                 <rect key="frame" x="0.0" y="114" width="345" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -262,13 +272,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a profile picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QS6-YK-3ce">
-                                <rect key="frame" x="186" y="100" width="164" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="150" y="100" width="194" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhz-ws-tWZ">
-                                <rect key="frame" x="15" y="498" width="289.5" height="22"/>
+                                <rect key="frame" x="15" y="499.5" width="289.5" height="22"/>
                                 <state key="normal" title="I accept the terms and conditions" image="checkmark.seal.fill" catalog="system">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -276,9 +286,18 @@
                                     <action selector="AcceptButt:" destination="fEB-cZ-Xhd" eventType="touchUpInside" id="qiV-Vn-tsE"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 285" translatesAutoresizingMaskIntoConstraints="NO" id="s41-Y5-SR1">
-                                <rect key="frame" x="16" y="79" width="84" height="82"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 285" translatesAutoresizingMaskIntoConstraints="NO" id="s41-Y5-SR1">
+                                <rect key="frame" x="16" y="80.5" width="84" height="82"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="CpE-BR-SXd"/>
+                                    <constraint firstAttribute="width" constant="84" id="lNo-qx-LhL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0j-CV-wBP">
                                 <rect key="frame" x="15" y="609" width="345" height="48"/>
@@ -312,7 +331,7 @@
                             <constraint firstItem="xhz-ws-tWZ" firstAttribute="top" secondItem="efG-CT-VW3" secondAttribute="bottom" constant="32" id="MfA-ca-2EA"/>
                             <constraint firstItem="c0j-CV-wBP" firstAttribute="leading" secondItem="Pdq-ea-c0t" secondAttribute="leading" constant="15" id="bVP-Jr-kuU"/>
                             <constraint firstItem="c0j-CV-wBP" firstAttribute="centerX" secondItem="zXy-LN-40J" secondAttribute="centerX" id="dPo-cS-9cs"/>
-                            <constraint firstItem="QS6-YK-3ce" firstAttribute="leading" secondItem="s41-Y5-SR1" secondAttribute="trailing" constant="86" id="eM9-rP-Mzr"/>
+                            <constraint firstItem="QS6-YK-3ce" firstAttribute="leading" secondItem="s41-Y5-SR1" secondAttribute="trailing" constant="50" id="eM9-rP-Mzr"/>
                             <constraint firstItem="Pdq-ea-c0t" firstAttribute="bottom" secondItem="c0j-CV-wBP" secondAttribute="bottom" constant="10" id="goi-YE-Fw1"/>
                             <constraint firstItem="efG-CT-VW3" firstAttribute="centerX" secondItem="zXy-LN-40J" secondAttribute="centerX" id="ulg-1v-HG5"/>
                         </constraints>
@@ -323,7 +342,10 @@
                         <outlet property="PassConf" destination="Wqf-4M-3Lt" id="EKZ-AS-Xkd"/>
                         <outlet property="Phone" destination="FjL-H5-fk4" id="7Mn-eD-qPf"/>
                         <outlet property="Username" destination="s9R-5W-Ysa" id="WDU-qa-H0x"/>
+                        <outlet property="dialCode" destination="dEv-RM-d4S" id="c10-0K-aIy"/>
                         <outlet property="emailTxt" destination="XUZ-LN-9Ug" id="2av-Wt-EHq"/>
+                        <outlet property="profilePic" destination="s41-Y5-SR1" id="peE-jD-TmB"/>
+                        <outlet property="theScreen" destination="zXy-LN-40J" id="umL-CK-GUi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pb4-n4-sTz" sceneMemberID="firstResponder"/>

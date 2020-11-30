@@ -25,7 +25,7 @@ class HomeTableViewViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 240
+        return 245
     }
     
     
@@ -37,7 +37,10 @@ class HomeTableViewViewController: UIViewController, UITableViewDataSource, UITa
         
         
     }
-    @IBAction func collectionViewselBut(_ sender: Any) {}
+    @IBAction func collectionViewselBut(_ sender: Any) {
+        let vc = CollectionView()
+        navigationController?.pushViewController(vc, animated: false)
+    }
     @IBOutlet weak var seperator: UILabel!
     @IBOutlet weak var homeLabel: UILabel!
     @IBOutlet weak var countryImage: UIImageView!

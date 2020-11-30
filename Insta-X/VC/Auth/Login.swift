@@ -8,6 +8,8 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import NVActivityIndicatorView
+
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var userNametxt: UITextField!
@@ -16,9 +18,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var googleBtn: UIButton!
     @IBOutlet weak var facebookBtn: UIButton!
+
+    let TabBarVC = TabBar()
+    
+    var loaderTwo = NVActivityIndicatorView(frame: .init(x: 0, y: 0, width: 150, height: 150), type: .orbit, color: #colorLiteral(red: 0.2998352051, green: 0.2986930907, blue: 0.9962851405, alpha: 1))
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
+       
+        userNametxt.addPadding(padding: .left(10))
+        passwordTxt.addPadding(padding: .left(10))
         
         userNametxt.layer.borderColor = #colorLiteral(red: 0.8545786738, green: 0.853570044, blue: 0.9281356931, alpha: 1)
         userNametxt.layer.borderWidth = 0.8
@@ -48,7 +61,9 @@ class LoginViewController: UIViewController {
         // check response
         // if success -> Enter Code
         // if fail -> "Show Alert with Message"
-      
+       
+       
+        
         
         
         guard let userName = userNametxt.text, userName.count > 5, userName.contains("@") else {
@@ -70,28 +85,30 @@ class LoginViewController: UIViewController {
             "password" : passWord
         ]
         
-      let request =  AF.request(loginURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
-            request.responseJSON { (response) in
-                if let data = response.data {
-                    print(JSON(data))
-                    let decoder = JSONDecoder()
-                    if let LoginModel = try? decoder.decode(RegisterModel.self, from: data) {
-                        self.handleRespnse(Model: LoginModel)
-                    }
-                }
-               
-            }
-    
-    }
-
-    func handleRespnse(Model: RegisterModel) {
-        if Model.status == "error" {
-            showAlert(title: Model.status, message: Model.message)
-        } else {
-            showAlert(title: "success", message: "Entered Successfully")
+        view.addSubview(loaderTwo)
+        loaderTwo.center = view.center
+        loaderTwo.startAnimating()
+        
+        Network.Request(RegisterModel.self, url: loginURL, method: .post, parameters: parameters) { (model) in
+            self.handleRespnse(Model: model)
             
+            self.loaderTwo.stopAnimating()
+            self.loaderTwo.isHidden = true
+        } onFailure: { (error) in
+            self.showAlert(title: "Error", message: error)
+            self.loaderTwo.stopAnimating()
+            self.loaderTwo.isHidden = true
         }
+
     }
+    
+    
+
+    
+    
+    
+
+  
     
     
     @IBAction func logInButton(_ sender: Any) {
@@ -100,5 +117,21 @@ class LoginViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+
+
+
+    
+    func handleRespnse(Model: RegisterModel) {
+        if Model.status == "error" {
+            showAlert(title: Model.status, message: Model.message)
+        } else {
+           
+            navigationController?.pushViewController(self.TabBarVC, animated: true)
+            navigationController?.navigationBar.isHidden = true
+            
+        }
+    }
+
 }
+
 

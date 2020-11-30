@@ -22,9 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sp = UIStoryboard(name: "AuthSB", bundle: .main)
         let vc = sp.instantiateInitialViewController()
         
+        let Tabar = TabBar()
+        let Homecollection = HomeTableViewViewController()
+        let collectView = CollectionView()
+        
         window?.rootViewController = vc
         
-        
+
 //        IQKeyboardManager.shared.enable = true
         return true
     }

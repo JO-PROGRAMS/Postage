@@ -30,8 +30,13 @@ class EnterCode: UIViewController {
             "email": email ?? "",
         ]
         
+        let headers = [
+            "Accept": "application/json",
+                "Content-Type": "application/json"
+        ]
         
-        let request =  AF.request("https://alfreeej-store.com/insta/api/activate", method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: nil)
+        
+        let request =  AF.request("https://alfreeej-store.com/insta/api/activate", method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: .init(headers))
         request.responseJSON { (response) in
             if let data = response.data {
                 print(JSON(data))

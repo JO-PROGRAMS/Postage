@@ -10,4 +10,5 @@ target 'Insta-X' do
   pod 'IQKeyboardManagerSwift'
   pod 'Alamofire', '~> 5.2'
   pod 'SwiftyJSON'
+  pod 'NVActivityIndicatorView'
 end
