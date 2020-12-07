@@ -15,17 +15,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        IQKeyboardManager.shared.enable = true
         window = UIWindow()
         window?.makeKeyAndVisible()
         
         let sp = UIStoryboard(name: "AuthSB", bundle: .main)
         let vc = sp.instantiateInitialViewController()
         
-        window?.rootViewController = vc
+        let Tabar = TabBar()
+        let Homecollection = HomeTableViewViewController()
+    
         
+        let usertoken = UserDefaults.standard.string(forKey: "accessToken")
         
-//        IQKeyboardManager.shared.enable = true
+     if usertoken == nil {
+          window?.rootViewController = vc
+        }else{
+            window?.rootViewController = Tabar
+        }
+        
+
+        
+
+        IQKeyboardManager.shared.enable = true
         return true
     }
 }
