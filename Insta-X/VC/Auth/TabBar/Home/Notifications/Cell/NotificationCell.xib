@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="shI-q2-uuV" customClass="NotificationCell" customModule="Insta_X" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="shI-q2-uuV" id="Y8l-Vm-V9W">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="45" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-T6-qkR">
+                        <rect key="frame" x="20" y="15" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="T5m-y8-r7X"/>
+                            <constraint firstAttribute="height" constant="40" id="sJL-GF-bQR"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User gave you a like on your post!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y61-Ho-2Jl">
+                        <rect key="frame" x="70" y="28" width="187.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24/11/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcV-Ta-H8x">
+                        <rect key="frame" x="263" y="67" width="41" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Y61-Ho-2Jl" firstAttribute="leading" secondItem="aHe-T6-qkR" secondAttribute="trailing" constant="10" id="3Iu-9C-Rn8"/>
+                    <constraint firstItem="hcV-Ta-H8x" firstAttribute="trailing" secondItem="Y8l-Vm-V9W" secondAttribute="trailingMargin" id="4yQ-D1-dyf"/>
+                    <constraint firstItem="hcV-Ta-H8x" firstAttribute="bottom" secondItem="Y8l-Vm-V9W" secondAttribute="bottomMargin" id="EUQ-XM-jes"/>
+                    <constraint firstItem="Y61-Ho-2Jl" firstAttribute="centerY" secondItem="aHe-T6-qkR" secondAttribute="centerY" id="QKr-B1-bte"/>
+                    <constraint firstItem="aHe-T6-qkR" firstAttribute="top" secondItem="Y8l-Vm-V9W" secondAttribute="top" constant="15" id="h3h-vo-rVQ"/>
+                    <constraint firstItem="aHe-T6-qkR" firstAttribute="leading" secondItem="Y8l-Vm-V9W" secondAttribute="leading" constant="20" id="oes-zH-HeO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="FMN-gU-hdL"/>
+            <connections>
+                <outlet property="actionlbel" destination="Y61-Ho-2Jl" id="ieN-yn-O7i"/>
+                <outlet property="dateLabel" destination="hcV-Ta-H8x" id="XnM-j6-Xct"/>
+                <outlet property="profilePic" destination="aHe-T6-qkR" id="J8P-v6-O8A"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="91.071428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="45" width="106" height="106"/>
+    </resources>
+</document>

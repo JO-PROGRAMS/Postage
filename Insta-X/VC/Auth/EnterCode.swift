@@ -9,6 +9,20 @@ import Foundation
 import UIKit
 import SwiftyJSON
 import Alamofire
+
+class loginVc {
+    
+    let hey = "hey"
+    
+    
+}
+
+class clone: loginVc {
+    
+    let ok = "ok"
+    
+}
+
 class EnterCode: UIViewController {
     
     @IBOutlet weak var CodeTXT: UITextField!
@@ -41,7 +55,7 @@ class EnterCode: UIViewController {
             if let data = response.data {
                 print(JSON(data))
                 let decoder = JSONDecoder()
-                if let LoginModel = try? decoder.decode(model2.self, from: data) {
+                if let LoginModel = try? decoder.decode(RegisterModel.self, from: data) {
                     self.handleRespnse(Model: LoginModel)
                 }
             }
@@ -50,7 +64,7 @@ class EnterCode: UIViewController {
         
         
         
-        
+
         
         
         
@@ -58,16 +72,16 @@ class EnterCode: UIViewController {
     }
     
     
-    struct model2: Codable {
-        let status: String
-        let message: String
-    }
     
-    func handleRespnse(Model: model2) {
+    let vc = loginVc.self
+
+    
+    func handleRespnse(Model: RegisterModel) {
         if Model.status == "error" {
             showAlert(title: Model.status, message: Model.message)
         } else {
-            showAlert(title: "success", message: "Entered Successfully")
+            UserDefaults.standard.setValue(Model.data.accessToken, forKey: "accessToken")
+            navigationController?.pushViewController(TabBar(), animated: true)
         }
     }
     

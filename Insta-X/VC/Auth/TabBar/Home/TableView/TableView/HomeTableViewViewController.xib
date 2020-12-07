@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeTableViewViewController" customModule="Insta_X" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="XwP-OI-s5C" id="CS1-OX-gLC"/>
                 <outlet property="collectionViewOutlet" destination="1UF-5Q-dKH" id="jMJ-Ss-h1Y"/>
                 <outlet property="countryImage" destination="tNO-gx-DCg" id="gFg-Wx-KOc"/>
                 <outlet property="homeLabel" destination="p4Y-Mz-bIn" id="SLS-VM-9qk"/>
@@ -67,6 +68,16 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XwP-OI-s5C">
+                    <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q4K-Bb-hq8">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4Y-Mz-bIn">
                     <rect key="frame" x="250.5" y="25" width="48.5" height="41"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -87,12 +98,16 @@
                 <constraint firstItem="sAH-Uo-G6a" firstAttribute="top" secondItem="KAA-pb-q1j" secondAttribute="bottom" constant="10" id="5u8-BZ-FVn"/>
                 <constraint firstItem="tNO-gx-DCg" firstAttribute="leading" secondItem="p4Y-Mz-bIn" secondAttribute="trailing" constant="20" id="9XB-lA-Us2"/>
                 <constraint firstItem="KAA-pb-q1j" firstAttribute="leading" secondItem="1UF-5Q-dKH" secondAttribute="trailing" constant="21" id="IDY-rt-CJa"/>
+                <constraint firstItem="XwP-OI-s5C" firstAttribute="top" secondItem="KAA-pb-q1j" secondAttribute="bottom" constant="10" id="Jsx-ML-Ve6"/>
+                <constraint firstItem="XwP-OI-s5C" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="QtT-aM-4ie"/>
                 <constraint firstItem="1UF-5Q-dKH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="RwY-F1-7OK"/>
                 <constraint firstItem="vj7-3f-Kbn" firstAttribute="leading" secondItem="NMm-Gp-579" secondAttribute="trailing" constant="40" id="csV-wk-Wqx"/>
+                <constraint firstItem="XwP-OI-s5C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eSq-Cv-uhb"/>
                 <constraint firstItem="p4Y-Mz-bIn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="hJr-GS-NCX"/>
                 <constraint firstItem="tNO-gx-DCg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="huk-av-6gi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tNO-gx-DCg" secondAttribute="trailing" constant="15" id="itZ-Cw-Jjw"/>
                 <constraint firstItem="NMm-Gp-579" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="jCr-mf-EKv"/>
+                <constraint firstItem="XwP-OI-s5C" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="jL4-tZ-vC7"/>
                 <constraint firstItem="vj7-3f-Kbn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="kta-12-mtM"/>
                 <constraint firstItem="sAH-Uo-G6a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nan-Dn-cLQ"/>
                 <constraint firstItem="1UF-5Q-dKH" firstAttribute="leading" secondItem="vj7-3f-Kbn" secondAttribute="trailing" constant="25" id="s12-wL-oaN"/>

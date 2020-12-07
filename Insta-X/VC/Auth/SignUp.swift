@@ -141,7 +141,7 @@ class SignUp: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         let url = "https://alfreeej-store.com/insta/api/signup"
         
-        Network.network.upload(RegisterModel.self, url: url, userImage: userImage, body: body, method: .post) { (model) in
+        Network.network.upload(SignInModel.self, url: url, userImage: userImage, body: body, method: .post) { (model) in
             self.handleRespnse(Model: model)
             self.loader.stopAnimating()
             self.loader.isHidden = true
@@ -237,12 +237,12 @@ extension SignUp: UIPickerViewDelegate, UIPickerViewDataSource {
     
 
 
-    func handleRespnse(Model: RegisterModel) {
+    func handleRespnse(Model: SignInModel) {
         if Model.status == "error" {
             showAlert(title: Model.status, message: Model.message)
         } else {
             //            showAlert(title: Model.status, message: Model.message)
-            let email = Model.data?.email
+            let email = Model.data.email
             let storyboard = UIStoryboard(name: "AuthSB", bundle: .main)
             let vc = storyboard.instantiateViewController(identifier: "EnterCode") as! EnterCode
             vc.email = email

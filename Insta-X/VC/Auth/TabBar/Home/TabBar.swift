@@ -18,8 +18,7 @@ class TabBar: UITabBarController {
         let homeVC = HomeTableViewViewController()
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "Group -3"), selectedImage: #imageLiteral(resourceName: "Group 7"))
         
-        let notsVC = UIViewController()
-        notsVC.view.backgroundColor = .blue
+        let notsVC = NotificationController()
         notsVC.tabBarItem = UITabBarItem(title: "Notifications", image: #imageLiteral(resourceName: "Path 2"), selectedImage: #imageLiteral(resourceName: "Path -1"))
         
         let chatVC = UIViewController()

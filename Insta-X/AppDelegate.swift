@@ -24,12 +24,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let Tabar = TabBar()
         let Homecollection = HomeTableViewViewController()
-        let collectView = CollectionView()
+    
         
-        window?.rootViewController = vc
+        let usertoken = UserDefaults.standard.string(forKey: "accessToken")
+        
+     if usertoken == nil {
+          window?.rootViewController = vc
+        }else{
+            window?.rootViewController = Tabar
+        }
         
 
-//        IQKeyboardManager.shared.enable = true
+        
+
+        IQKeyboardManager.shared.enable = true
         return true
     }
 }

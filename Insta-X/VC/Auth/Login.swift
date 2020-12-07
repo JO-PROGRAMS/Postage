@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
 
     let TabBarVC = TabBar()
     
-    var loaderTwo = NVActivityIndicatorView(frame: .init(x: 0, y: 0, width: 150, height: 150), type: .orbit, color: #colorLiteral(red: 0.2998352051, green: 0.2986930907, blue: 0.9962851405, alpha: 1))
+    var loaderTwo = NVActivityIndicatorView(frame: .init(x: 0, y: 0, width: 150, height: 150), type: .squareSpin, color: #colorLiteral(red: 0.2998352051, green: 0.2986930907, blue: 0.9962851405, alpha: 1))
     
     
     override func viewDidLoad() {
@@ -90,8 +90,9 @@ class LoginViewController: UIViewController {
         loaderTwo.startAnimating()
         
         Network.Request(RegisterModel.self, url: loginURL, method: .post, parameters: parameters) { (model) in
+
             self.handleRespnse(Model: model)
-            
+            print(JSON(model.data))
             self.loaderTwo.stopAnimating()
             self.loaderTwo.isHidden = true
         } onFailure: { (error) in
@@ -125,7 +126,7 @@ class LoginViewController: UIViewController {
         if Model.status == "error" {
             showAlert(title: Model.status, message: Model.message)
         } else {
-           
+            UserDefaults.standard.setValue(Model.data.accessToken, forKey: "accessToken")
             navigationController?.pushViewController(self.TabBarVC, animated: true)
             navigationController?.navigationBar.isHidden = true
             

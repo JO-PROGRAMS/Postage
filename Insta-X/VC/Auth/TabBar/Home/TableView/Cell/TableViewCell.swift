@@ -20,6 +20,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var replyCount: UILabel!
     @IBOutlet weak var shareImage: UIImageView!
     @IBOutlet weak var shareCount: UILabel!
+    @IBOutlet weak var username: UILabel!
     
     
     override func awakeFromNib() {

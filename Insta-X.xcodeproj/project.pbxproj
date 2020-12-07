@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4B1B7F5361AE635C2C05B853 /* Pods_Insta_X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EFF497A350F19D7DF9CFB8 /* Pods_Insta_X.framework */; };
 		E84D5E11255C5AD900423CBE /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D5E10255C5AD900423CBE /* Login.swift */; };
-		F70F0A352575324A004DCEFE /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70F0A332575324A004DCEFE /* CollectionView.swift */; };
-		F70F0A362575324A004DCEFE /* CollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F70F0A342575324A004DCEFE /* CollectionView.xib */; };
 		F70F0A3D257538FC004DCEFE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70F0A3B257538FC004DCEFE /* CollectionViewCell.swift */; };
 		F70F0A3E257538FC004DCEFE /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F70F0A3C257538FC004DCEFE /* CollectionViewCell.xib */; };
 		F748713825595F3200599306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748713725595F3200599306 /* AppDelegate.swift */; };
@@ -24,7 +22,12 @@
 		F779D9E2256AD878000C4A5B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779D9E1256AD878000C4A5B /* Networking.swift */; };
 		F779D9E5256BEFDF000C4A5B /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779D9E4256BEFDF000C4A5B /* Padding.swift */; };
 		F77F2EE525712597007EEBB2 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77F2EE425712597007EEBB2 /* TabBar.swift */; };
+		F79A7D752577C738004F23A9 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A7D732577C738004F23A9 /* NotificationCell.swift */; };
+		F79A7D762577C738004F23A9 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79A7D742577C738004F23A9 /* NotificationCell.xib */; };
+		F79A7D7A2577CB0A004F23A9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A7D782577CB0A004F23A9 /* NotificationController.swift */; };
+		F79A7D7B2577CB0A004F23A9 /* NotificationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79A7D792577CB0A004F23A9 /* NotificationController.xib */; };
 		F79AE2962567B2A5006D6161 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79AE2952567B2A5006D6161 /* CountriesModel.swift */; };
+		F7B08C64257A33F3002CA8D7 /* LatestPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B08C63257A33F3002CA8D7 /* LatestPosts.swift */; };
 		F7BBAE792574285700C5A16D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BBAE772574285700C5A16D /* TableViewCell.swift */; };
 		F7BBAE7A2574285700C5A16D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BBAE782574285700C5A16D /* TableViewCell.xib */; };
 		F7BBAE7F25742A6100C5A16D /* HomeTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BBAE7D25742A6100C5A16D /* HomeTableViewViewController.swift */; };
@@ -38,8 +41,6 @@
 		DC5DC3B9E6144C3E1164472D /* Pods-Insta-X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-X.debug.xcconfig"; path = "Target Support Files/Pods-Insta-X/Pods-Insta-X.debug.xcconfig"; sourceTree = "<group>"; };
 		E84D5E10255C5AD900423CBE /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E8EFF497A350F19D7DF9CFB8 /* Pods_Insta_X.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Insta_X.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F70F0A332575324A004DCEFE /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
-		F70F0A342575324A004DCEFE /* CollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionView.xib; sourceTree = "<group>"; };
 		F70F0A3B257538FC004DCEFE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F70F0A3C257538FC004DCEFE /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		F748713425595F3200599306 /* Insta-X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta-X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +60,12 @@
 		F779D9E1256AD878000C4A5B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F779D9E4256BEFDF000C4A5B /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		F77F2EE425712597007EEBB2 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		F79A7D732577C738004F23A9 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		F79A7D742577C738004F23A9 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		F79A7D782577CB0A004F23A9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F79A7D792577CB0A004F23A9 /* NotificationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationController.xib; sourceTree = "<group>"; };
 		F79AE2952567B2A5006D6161 /* CountriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
+		F7B08C63257A33F3002CA8D7 /* LatestPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPosts.swift; sourceTree = "<group>"; };
 		F7BBAE772574285700C5A16D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F7BBAE782574285700C5A16D /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		F7BBAE7D25742A6100C5A16D /* HomeTableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				F70F0A3A257538BB004DCEFE /* Cells */,
-				F70F0A39257538A8004DCEFE /* CollectionView */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -158,15 +163,6 @@
 				F7BBAE782574285700C5A16D /* TableViewCell.xib */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		F70F0A39257538A8004DCEFE /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				F70F0A332575324A004DCEFE /* CollectionView.swift */,
-				F70F0A342575324A004DCEFE /* CollectionView.xib */,
-			);
-			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		F70F0A3A257538BB004DCEFE /* Cells */ = {
@@ -260,10 +256,38 @@
 			path = COF;
 			sourceTree = "<group>";
 		};
+		F79A7D6A2577BDA6004F23A9 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				F79A7D6C2577BDCE004F23A9 /* ControllerFile */,
+				F79A7D6B2577BDC4004F23A9 /* Cell */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		F79A7D6B2577BDC4004F23A9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F79A7D732577C738004F23A9 /* NotificationCell.swift */,
+				F79A7D742577C738004F23A9 /* NotificationCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F79A7D6C2577BDCE004F23A9 /* ControllerFile */ = {
+			isa = PBXGroup;
+			children = (
+				F79A7D782577CB0A004F23A9 /* NotificationController.swift */,
+				F79A7D792577CB0A004F23A9 /* NotificationController.xib */,
+			);
+			path = ControllerFile;
+			sourceTree = "<group>";
+		};
 		F79AE2942567B28D006D6161 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F79AE2952567B2A5006D6161 /* CountriesModel.swift */,
+				F7B08C63257A33F3002CA8D7 /* LatestPosts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +295,7 @@
 		F7BBAE762574281800C5A16D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F79A7D6A2577BDA6004F23A9 /* Notifications */,
 				F70F0A302575316D004DCEFE /* TableView */,
 				F70F0A2F25753160004DCEFE /* CollectionView */,
 				F77F2EE425712597007EEBB2 /* TabBar.swift */,
@@ -337,12 +362,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F70F0A362575324A004DCEFE /* CollectionView.xib in Resources */,
 				F70F0A3E257538FC004DCEFE /* CollectionViewCell.xib in Resources */,
 				F7CFE724255971B300FCDD21 /* AuthSB.storyboard in Resources */,
 				F7BBAE7A2574285700C5A16D /* TableViewCell.xib in Resources */,
 				F7BBAE8025742A6100C5A16D /* HomeTableViewViewController.xib in Resources */,
+				F79A7D762577C738004F23A9 /* NotificationCell.xib in Resources */,
 				F748714425595F3200599306 /* LaunchScreen.storyboard in Resources */,
+				F79A7D7B2577CB0A004F23A9 /* NotificationController.xib in Resources */,
 				F748714125595F3200599306 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,14 +426,16 @@
 				F774B33B2561B73100E0713B /* SignUp.swift in Sources */,
 				F77F2EE525712597007EEBB2 /* TabBar.swift in Sources */,
 				F779D9E2256AD878000C4A5B /* Networking.swift in Sources */,
+				F7B08C64257A33F3002CA8D7 /* LatestPosts.swift in Sources */,
 				F79AE2962567B2A5006D6161 /* CountriesModel.swift in Sources */,
 				E84D5E11255C5AD900423CBE /* Login.swift in Sources */,
-				F70F0A352575324A004DCEFE /* CollectionView.swift in Sources */,
 				F748713C25595F3200599306 /* ViewController.swift in Sources */,
 				F75F6285255C41C200BD0727 /* EnterCode.swift in Sources */,
+				F79A7D752577C738004F23A9 /* NotificationCell.swift in Sources */,
 				F774B33E2561BCC300E0713B /* ShowAlertExtensions.swift in Sources */,
 				F70F0A3D257538FC004DCEFE /* CollectionViewCell.swift in Sources */,
 				F7BBAE7F25742A6100C5A16D /* HomeTableViewViewController.swift in Sources */,
+				F79A7D7A2577CB0A004F23A9 /* NotificationController.swift in Sources */,
 				F748713825595F3200599306 /* AppDelegate.swift in Sources */,
 				F774B3362561B39E00E0713B /* extensions.swift in Sources */,
 				F779D9E5256BEFDF000C4A5B /* Padding.swift in Sources */,
