@@ -6,49 +6,10 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeTableViewViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    
-    func NKPlaceholderImage(image:UIImage?, imageView:UIImageView?,imgUrl:String,compate:@escaping (UIImage?) -> Void){
-        
-        if image != nil && imageView != nil {
-            imageView!.image = image!
-        }
-        
-        var urlcatch = imgUrl.replacingOccurrences(of: "/", with: "#")
-        let documentpath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        urlcatch = documentpath + "/" + "\(urlcatch)"
-        
-        let image = UIImage(contentsOfFile:urlcatch)
-        if image != nil && imageView != nil
-        {
-            imageView!.image = image!
-            compate(image)
-            
-        }else{
-            
-            if let url = URL(string: imgUrl){
-                
-                DispatchQueue.global(qos: .background).async {
-                    () -> Void in
-                    let imgdata = NSData(contentsOf: url)
-                    DispatchQueue.main.async {
-                        () -> Void in
-                        imgdata?.write(toFile: urlcatch, atomically: true)
-                        let image = UIImage(contentsOfFile:urlcatch)
-                        compate(image)
-                        if image != nil  {
-                            if imageView != nil  {
-                                imageView!.image = image!
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
+
     var latestPosts = [Datum]() {
         didSet{
             tableView.reloadData()
@@ -65,6 +26,8 @@ class HomeTableViewViewController: UIViewController, UITableViewDataSource, UITa
         let posts = latestPosts[indexPath.row]
         cell.userName.text = posts.user.username
         cell.viewcount.text = "\(posts.viewsCount) views"
+        cell.uploadedPic.sd_setImage(with: URL(string: posts.file), placeholderImage: UIImage(named: "file"))
+        cell.userPic.sd_setImage(with: URL(string: posts.user.image), placeholderImage: UIImage(named: "file"))
         return cell
     }
     
@@ -87,6 +50,15 @@ class HomeTableViewViewController: UIViewController, UITableViewDataSource, UITa
     
     //Seperator
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let posts = latestPosts[indexPath.row]
+        self.present(SelectedCellViewController(), animated: true, completion: nil)
+        let selectedCellcontroller = SelectedCellViewController()
+        selectedCellcontroller.likesCount = posts.likesCount
+       selectedCellcontroller.mainPic.sd_setImage(with: URL(string: posts.file), placeholderImage: UIImage(named: "file"))
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         latestPosts.count
     }
@@ -96,16 +68,14 @@ class HomeTableViewViewController: UIViewController, UITableViewDataSource, UITa
      
         cell.backgroundColor = .white
         let posts = latestPosts[indexPath.row]
-        NKPlaceholderImage(image: UIImage(named: "Image"), imageView: nil, imgUrl: posts.file) { (image) in
-            cell.mainPic.image = image
-        }
-        NKPlaceholderImage(image: UIImage(named: "Image"), imageView: nil, imgUrl: posts.user.image) { (image) in
-            cell.profilePic.image = image
-        }
+        cell.mainPic.sd_setImage(with: URL(string: posts.file), placeholderImage: UIImage(named: "file"))
+        cell.profilePic.sd_setImage(with: URL(string: posts.user.image), placeholderImage: UIImage(named: "profile"))
         cell.username.text = posts.user.username
         cell.llikeCount.text = "\(posts.likesCount)"
         cell.replyCount.text = "\(posts.commentsCount)"
         cell.shareCount.text = "\(posts.sharesCount)"
+        
+
        return cell
           
         

@@ -22,6 +22,10 @@
 		F779D9E2256AD878000C4A5B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779D9E1256AD878000C4A5B /* Networking.swift */; };
 		F779D9E5256BEFDF000C4A5B /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779D9E4256BEFDF000C4A5B /* Padding.swift */; };
 		F77F2EE525712597007EEBB2 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77F2EE425712597007EEBB2 /* TabBar.swift */; };
+		F78B01722581421B00A5B2A7 /* SelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B01702581421B00A5B2A7 /* SelectedCell.swift */; };
+		F78B01732581421B00A5B2A7 /* SelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F78B01712581421B00A5B2A7 /* SelectedCell.xib */; };
+		F78B017F258146A700A5B2A7 /* SelectedCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B017D258146A700A5B2A7 /* SelectedCellViewController.swift */; };
+		F78B0180258146A700A5B2A7 /* SelectedCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F78B017E258146A700A5B2A7 /* SelectedCellViewController.xib */; };
 		F79A7D752577C738004F23A9 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A7D732577C738004F23A9 /* NotificationCell.swift */; };
 		F79A7D762577C738004F23A9 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79A7D742577C738004F23A9 /* NotificationCell.xib */; };
 		F79A7D7A2577CB0A004F23A9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A7D782577CB0A004F23A9 /* NotificationController.swift */; };
@@ -60,6 +64,10 @@
 		F779D9E1256AD878000C4A5B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F779D9E4256BEFDF000C4A5B /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		F77F2EE425712597007EEBB2 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		F78B01702581421B00A5B2A7 /* SelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCell.swift; sourceTree = "<group>"; };
+		F78B01712581421B00A5B2A7 /* SelectedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedCell.xib; sourceTree = "<group>"; };
+		F78B017D258146A700A5B2A7 /* SelectedCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCellViewController.swift; sourceTree = "<group>"; };
+		F78B017E258146A700A5B2A7 /* SelectedCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedCellViewController.xib; sourceTree = "<group>"; };
 		F79A7D732577C738004F23A9 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		F79A7D742577C738004F23A9 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		F79A7D782577CB0A004F23A9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -292,9 +300,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F7A8A63125800141007DE5F9 /* See selection */ = {
+			isa = PBXGroup;
+			children = (
+				F7A8A6382581314A007DE5F9 /* Cell */,
+				F78B017D258146A700A5B2A7 /* SelectedCellViewController.swift */,
+				F78B017E258146A700A5B2A7 /* SelectedCellViewController.xib */,
+			);
+			path = "See selection";
+			sourceTree = "<group>";
+		};
+		F7A8A6382581314A007DE5F9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F78B01702581421B00A5B2A7 /* SelectedCell.swift */,
+				F78B01712581421B00A5B2A7 /* SelectedCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F7BBAE762574281800C5A16D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F7A8A63125800141007DE5F9 /* See selection */,
 				F79A7D6A2577BDA6004F23A9 /* Notifications */,
 				F70F0A302575316D004DCEFE /* TableView */,
 				F70F0A2F25753160004DCEFE /* CollectionView */,
@@ -362,6 +390,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78B01732581421B00A5B2A7 /* SelectedCell.xib in Resources */,
+				F78B0180258146A700A5B2A7 /* SelectedCellViewController.xib in Resources */,
 				F70F0A3E257538FC004DCEFE /* CollectionViewCell.xib in Resources */,
 				F7CFE724255971B300FCDD21 /* AuthSB.storyboard in Resources */,
 				F7BBAE7A2574285700C5A16D /* TableViewCell.xib in Resources */,
@@ -428,6 +458,8 @@
 				F779D9E2256AD878000C4A5B /* Networking.swift in Sources */,
 				F7B08C64257A33F3002CA8D7 /* LatestPosts.swift in Sources */,
 				F79AE2962567B2A5006D6161 /* CountriesModel.swift in Sources */,
+				F78B017F258146A700A5B2A7 /* SelectedCellViewController.swift in Sources */,
+				F78B01722581421B00A5B2A7 /* SelectedCell.swift in Sources */,
 				E84D5E11255C5AD900423CBE /* Login.swift in Sources */,
 				F748713C25595F3200599306 /* ViewController.swift in Sources */,
 				F75F6285255C41C200BD0727 /* EnterCode.swift in Sources */,

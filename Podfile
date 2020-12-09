@@ -11,4 +11,5 @@ target 'Insta-X' do
   pod 'Alamofire', '~> 5.2'
   pod 'SwiftyJSON'
   pod 'NVActivityIndicatorView'
+  pod 'SDWebImage'
 end
