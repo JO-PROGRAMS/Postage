@@ -12,7 +12,6 @@
 		F70F0A3D257538FC004DCEFE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70F0A3B257538FC004DCEFE /* CollectionViewCell.swift */; };
 		F70F0A3E257538FC004DCEFE /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F70F0A3C257538FC004DCEFE /* CollectionViewCell.xib */; };
 		F748713825595F3200599306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748713725595F3200599306 /* AppDelegate.swift */; };
-		F748713C25595F3200599306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748713B25595F3200599306 /* ViewController.swift */; };
 		F748714125595F3200599306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F748714025595F3200599306 /* Assets.xcassets */; };
 		F748714425595F3200599306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F748714225595F3200599306 /* LaunchScreen.storyboard */; };
 		F75F6285255C41C200BD0727 /* EnterCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F6284255C41C200BD0727 /* EnterCode.swift */; };
@@ -45,7 +44,6 @@
 		F70F0A3C257538FC004DCEFE /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		F748713425595F3200599306 /* Insta-X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta-X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F748713725595F3200599306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F748713B25595F3200599306 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F748714025595F3200599306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F748714325595F3200599306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F748714525595F3200599306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				E84D5E0E255C5ABF00423CBE /* VC */,
 				E84D5E0C255C5AA400423CBE /* SP */,
 				F748713725595F3200599306 /* AppDelegate.swift */,
-				F748713B25595F3200599306 /* ViewController.swift */,
 				F748714025595F3200599306 /* Assets.xcassets */,
 				F748714525595F3200599306 /* Info.plist */,
 				F7C49406256596DE00261930 /* Constants.swift */,
@@ -429,7 +426,6 @@
 				F7B08C64257A33F3002CA8D7 /* LatestPosts.swift in Sources */,
 				F79AE2962567B2A5006D6161 /* CountriesModel.swift in Sources */,
 				E84D5E11255C5AD900423CBE /* Login.swift in Sources */,
-				F748713C25595F3200599306 /* ViewController.swift in Sources */,
 				F75F6285255C41C200BD0727 /* EnterCode.swift in Sources */,
 				F79A7D752577C738004F23A9 /* NotificationCell.swift in Sources */,
 				F774B33E2561BCC300E0713B /* ShowAlertExtensions.swift in Sources */,
