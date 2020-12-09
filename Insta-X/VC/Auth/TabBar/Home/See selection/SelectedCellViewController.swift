@@ -18,45 +18,7 @@ class SelectedCellViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var enterCommenttxt: UITextField!
     @IBOutlet weak var profilePic: UIImageView!
     
-    var mainImage: UIImage? = nil {
-        didSet {
-            mainPic.image = mainImage
-        }
-    }
-    var celluserName: String? = "Michelle" {
-        didSet {
-            commentSection.reloadData()
-        }
-    }
-    var cellAgo = "2 hours Ago" {
-        didSet {
-            commentSection.reloadData()
-        }
-    }
-    
-    var cellComment: String? = "#fashion #LOL #lol #Code" {
-        didSet {
-            commentSection.reloadData()
-        }
-    }
-    
-    var likesCount: Int? = nil {
-        didSet {
-            likeCount.text = "\(likesCount)"
-        }
-    }
-    
-    var commentsCount: Int? = 1{
-        didSet {
-            commentCount.text = "\(commentsCount)"
-        }
-    }
-    
-    var sharesCount: Int? = nil {
-        didSet {
-            shareCount.text = "\(sharesCount)"
-        }
-    }
+    var postData: Datum?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         50
@@ -65,9 +27,9 @@ class SelectedCellViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SelectedCell", for: indexPath) as! SelectedCell
         
-        cell.userName.text = self.celluserName
-        cell.timeAgo.text = self.cellAgo
-        cell.commentLabel.text = self.cellComment
+//        cell.userName.text = self.celluserName
+//        cell.timeAgo.text = self.cellAgo
+//        cell.commentLabel.text = self.cellComment
         
         return cell
     }
@@ -78,10 +40,23 @@ class SelectedCellViewController: UIViewController, UITableViewDataSource, UITab
         commentSection.dataSource = self
         commentSection.register(UINib(nibName: "SelectedCell", bundle: .main), forCellReuseIdentifier: "SelectedCell")
         // Do any additional setup after loading the view.
-        
+        configView()
     }
 
+    func configView() {
+        mainPic.loadWebImage(url: postData?.file)
+        
+        guard let id = postData?.id else { return }
+        
+        let url = "https://alfreeej-store.com/insta/api/posts/\(id)"
+        
+        Network.Request(String.self, url: url) { (data) in
+            print(data)
+        } onFailure: { (_) in
+            
+        }
 
+    }
 
 
 }

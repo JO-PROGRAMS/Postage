@@ -52,10 +52,11 @@ class HomeTableViewViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let posts = latestPosts[indexPath.row]
-        self.present(SelectedCellViewController(), animated: true, completion: nil)
-        let selectedCellcontroller = SelectedCellViewController()
-        selectedCellcontroller.likesCount = posts.likesCount
-       selectedCellcontroller.mainPic.sd_setImage(with: URL(string: posts.file), placeholderImage: UIImage(named: "file"))
+        
+        let vc = SelectedCellViewController()
+        vc.postData = posts
+        
+        self.present(vc, animated: true, completion: nil)
     }
     
     
@@ -68,8 +69,8 @@ class HomeTableViewViewController: UIViewController, UITableViewDataSource, UITa
      
         cell.backgroundColor = .white
         let posts = latestPosts[indexPath.row]
-        cell.mainPic.sd_setImage(with: URL(string: posts.file), placeholderImage: UIImage(named: "file"))
-        cell.profilePic.sd_setImage(with: URL(string: posts.user.image), placeholderImage: UIImage(named: "profile"))
+        cell.mainPic.loadWebImage(url: posts.file)
+        cell.profilePic.loadWebImage(url: posts.user.image)
         cell.username.text = posts.user.username
         cell.llikeCount.text = "\(posts.likesCount)"
         cell.replyCount.text = "\(posts.commentsCount)"
